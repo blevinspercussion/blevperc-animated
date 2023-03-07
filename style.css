@@ -1,0 +1,50 @@
+* {
+    margin: none;
+    padding: none;
+    font-family: 'Ubuntu', sans-serif;
+    --main-bg-color: #0D0D0D;
+    --alt-bg-color: #010326;
+    --main-text-color: white;
+    --accent-color1: #0FF25E;
+    --accent-color2: #02590F;
+    /* --main-bg-color: black;
+    --main-text-color: white;
+    --accent-color1: #892CDC;
+    --accent-color2: #BC6FF1; */
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color1);
+    font-size: 1.25rem;
+}
+
+a:hover {
+    color: var(--accent-color2)
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+li {
+    margin: 2rem;
+}
+
+nav {
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#title-div {
+    font-size: xx-large;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}

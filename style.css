@@ -8,6 +8,7 @@
     --accent-color1: #0FF25E;
     --accent-color2: #02590F;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     /* --main-bg-color: black;
     --main-text-color: white;
     --accent-color1: #892CDC;
@@ -44,7 +45,6 @@ a:hover {
 body {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
-    min-height: 150vh;
 }
 
 button {
@@ -105,9 +105,13 @@ header {
     font-size: 2.5rem;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+}
+
 img {
-    /* max-height: 70vh; */
-    /* max-height: 30rem; */
     min-width: 25rem;
 }
 
@@ -124,6 +128,10 @@ nav {
     justify-content: space-around;
 }
 
+.performance-subsection {
+    max-width: 45vw;
+}
+
 .section {
     display: flex;
     flex-direction: row;
@@ -132,7 +140,17 @@ nav {
     margin: 5rem;
     background-color: black;
     overflow: hidden;
-    
+}
+
+.section-heading {
+    margin-left: 25vw;
+    font-size: 3rem;
+}
+
+.shown {
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
 }
 
 .subsection {
@@ -148,7 +166,9 @@ nav {
 
 .subsection p {
     margin-top: 2rem;
+    max-width: 25vw;
 }
+
 
 #title-div a {
     color: white;

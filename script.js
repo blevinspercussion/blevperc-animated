@@ -1,4 +1,21 @@
-// Animate elements 
+//////////////////// Page element variables //////////
+
+
+////////////////// Intersection Observers ////////////
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const intersection = entry.isIntersecting;
+        entry.target.classList.remove("hidden");
+        entry.target.classList.add("shown");
+    })
+}, {threshold: 1});
+
+// observer.observe(document.getElementById("performance-div"))
+observer.observe(document.querySelectorAll("hidden"))
+
+//////////////////// Animate elements ////////////////
+
 
 anime({
     targets: "#title-div",

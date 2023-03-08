@@ -17,17 +17,16 @@ anime({
 })
 
 anime({
-    targets: ".main-image",
-    translateY: [-1500, 0],
+    targets: "#hero-text",
+    translateX: [2500, 0],
     delay: 500,
     duration: 1500,
-    // easing: "spring(1, 50, 10, 0)",
     easing: "easeInOutQuad",
 })
 
 anime({
-    targets: "#hero-text",
-    translateY: [1500, 0],
+    targets: "#hero",
+    translateX: [-1500, 0],
     delay: 500,
     duration: 1500,
     // easing: "spring(1, 50, 10, 0)",

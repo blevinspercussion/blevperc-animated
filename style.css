@@ -45,6 +45,7 @@ a:hover {
 body {
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+    /* min-height: 150vh; */
 }
 
 button {
@@ -107,8 +108,9 @@ header {
 
 .hidden {
     opacity: 0;
-    filter: blur(5px);
+    /* filter: blur(5px);
     transition: all 1s;
+    transform: translateY(100%); */
 }
 
 img {
@@ -128,6 +130,13 @@ nav {
     justify-content: space-around;
 }
 
+.page-wrapper {
+    min-height: 150vh;
+}
+
+#performance-div {
+}
+
 .performance-subsection {
     max-width: 45vw;
 }
@@ -139,7 +148,7 @@ nav {
     justify-content: flex-start;
     margin: 5rem;
     background-color: black;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .section-heading {

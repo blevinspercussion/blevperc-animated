@@ -1,18 +1,23 @@
 //////////////////// Page element variables //////////
 
-
 ////////////////// Intersection Observers ////////////
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        const intersection = entry.isIntersecting;
-        entry.target.classList.remove("hidden");
-        entry.target.classList.add("shown");
-    })
-}, {threshold: 1});
+hiddenElements = document.querySelectorAll(".hidden");
+sections = document.querySelectorAll(".section");
+console.log(hiddenElements)
 
-// observer.observe(document.getElementById("performance-div"))
-observer.observe(document.querySelectorAll("hidden"))
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            console.log(entry);
+        }
+    })
+})
+
+// observer.observe(document.querySelector(".hidden"))
+
+hiddenElements.forEach((el) => observer.observe(el));
+
 
 //////////////////// Animate elements ////////////////
 

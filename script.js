@@ -20,14 +20,16 @@ anime({
     targets: ".main-image",
     translateY: [-1500, 0],
     delay: 500,
-    duration: 1000,
-    easing: "spring()",
+    duration: 1500,
+    // easing: "spring(1, 50, 10, 0)",
+    easing: "easeInOutQuad",
 })
 
 anime({
-    targets: "#intro-div",
+    targets: "#hero-text",
     translateY: [1500, 0],
     delay: 500,
-    duration: 1000,
-    easing: "spring()",
+    duration: 1500,
+    // easing: "spring(1, 50, 10, 0)",
+    easing: "easeInOutQuad",
 })

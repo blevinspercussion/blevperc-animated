@@ -1,22 +1,5 @@
 //////////////////// Page element variables //////////
 
-////////////////// Intersection Observers ////////////
-
-hiddenElements = document.querySelectorAll(".hidden");
-sections = document.querySelectorAll(".section");
-console.log(hiddenElements)
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            console.log(entry);
-        }
-    })
-})
-
-// observer.observe(document.querySelector(".hidden"))
-
-hiddenElements.forEach((el) => observer.observe(el));
 
 
 //////////////////// Animate elements ////////////////
@@ -54,3 +37,21 @@ anime({
     // easing: "spring(1, 50, 10, 0)",
     easing: "easeInOutQuad",
 })
+
+////////////////// Intersection Observers ////////////
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("shown");
+            entry.target.classList.remove("not-shown");
+            console.group('done');
+
+        }
+    });
+}, {threshold: 0.5});
+
+hiddenElements = document.querySelectorAll(".not-shown");
+console.log(hiddenElements)
+hiddenElements.forEach((el) => observer.observe(el));
